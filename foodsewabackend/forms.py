@@ -10,9 +10,6 @@ def Validate_Username(username):
     if User.objects.filter(username=username).exists():
         raise ValidationError("Username already taken")
 
-# def Validate_Password(password1):
-#     if len(password1) < 6:
-#          raise ValidationError("Password must contain at least 6 characters.")    
 
 class RegistrationForm(forms.Form):
     username = forms.CharField(max_length=20, widget=forms.TextInput(attrs={"placeholder": "Username","required":True, "class": "form-control"}),error_messages={"required":"Username missing"}, validators=[Validate_Username])

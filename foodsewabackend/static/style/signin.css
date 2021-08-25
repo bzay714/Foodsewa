@@ -1,11 +1,13 @@
- body {
-     height: 100vh;
-     background-color: #FFCA00;
- }
- 
- .form-container {
-     background: white;
-     padding: 30px;
-     border-radius: 10px;
-     box-shadow: 0 0 10px 0 #000;
- }
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+body {
+    height: 100vh;
+    background-color: #FFCA00;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    font-family: 'Alegreya Sans', sans-serif;
+}
