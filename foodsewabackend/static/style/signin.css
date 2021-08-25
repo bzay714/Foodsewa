@@ -1,9 +1,11 @@
- body{
-    background-color: #FFCA00;
-} 
-.form-container{
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 #000;
-}
+ body {
+     height: 100vh;
+     background-color: #FFCA00;
+ }
+ 
+ .form-container {
+     background: white;
+     padding: 30px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px 0 #000;
+ }

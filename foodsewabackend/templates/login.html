@@ -25,7 +25,6 @@
             <div class="form-group mt-3">
               <label for="exampleInputEmail1">Username</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group mt-3">
               <label for="exampleInputPassword1">Password</label>
@@ -39,7 +38,7 @@
               <button type="submit" class="btn btn-primary w-50">Sign in</button>
             </div>
             <p class="mt-3 text-center">Not registered?    
-            <a href="register.html"> create an account </a></p>
+            <a href="{% url 'Signup' %}"> create an account </a></p>
           </form>
 
         </div>
