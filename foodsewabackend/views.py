@@ -28,7 +28,7 @@ def register(request):
             user.save()
             messages.success(request, "Your FoodSewa account has been successfully created. Please login to continue.")
 
-        return HttpResponseRedirect('/signin/')
+            return HttpResponseRedirect('/signin/')
     else:
         form = RegistrationForm()
     return render (request , "register.html",{"forms": form})

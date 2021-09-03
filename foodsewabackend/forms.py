@@ -30,7 +30,6 @@ class RegistrationForm(forms.Form):
         pass2 = cleaned_data.get("password2")
 
         if(pass1 != pass2):
-            print("Passworf not")
             raise ValidationError("Password not matching")
         
             
