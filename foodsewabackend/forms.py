@@ -1,6 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError 
 from django.contrib.auth.models import User
+from .models import Menu
 
 def Validate_Phone(value):
     if len(str(value)) != 10:
@@ -32,4 +33,12 @@ class RegistrationForm(forms.Form):
         if(pass1 != pass2):
             raise ValidationError("Password not matching")
         
-            
+class MenuForm(forms.ModelForm):
+    class Meta:
+        model = Menu
+        fields= ("name","price","Choose_restaurant")
+        widgets={
+            'name': forms.TextInput(attrs={'class':'form-control'}),
+            'price': forms.NumberInput(attrs={'class':'form-control'}),
+            'Choose_restaurant':forms.Select(attrs={'class':'form-control'})
+        }
