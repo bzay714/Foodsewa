@@ -132,3 +132,5 @@ def updateMenu(request, id):
         return render(request , "menuupdate.html",{'form':form})
 
 
+def contact(request):
+    return render(request, "contactus.html")

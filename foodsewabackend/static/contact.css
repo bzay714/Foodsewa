@@ -1,0 +1,62 @@
+.contact {
+    padding: 4%;
+    height: 400px;
+}
+
+.contact .col-md-3 {
+    background: #76b852;
+    padding: 4%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.contact-info {
+    margin-top: 10%;
+}
+
+.contactus-text {
+    color: #fff;
+}
+
+.contact-info img {
+    margin-bottom: 15%;
+}
+
+.contact-info h2 {
+    margin-bottom: 10%;
+}
+
+.contact .col-md-9 {
+    background: #fff;
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.contact-form label {
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+
+.contact-form button {
+    background: #76b852;
+    color: #fff;
+    font-weight: 600;
+    width: 25%;
+    font-family: "Roboto", sans-serif;
+}
+
+.contact-form button:focus {
+    box-shadow: none;
+}
+
+.contactrow {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 1000px;
+    margin-left: 110px;
+    padding: 60px;
+    text-align: left;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}

@@ -15,6 +15,7 @@ urlpatterns=[
      path('menu/',views.addMenu,name='menu'),
      path('deletemenu/<int:id>/', views.deleteMenu,name="deletemenu"),
      path('updatemenu/<int:id>/', views.updateMenu,name="updateMenu"),
+     path('contactus/',views.contact, name='contactus'),
 ]
    
 if settings.DEBUG:
