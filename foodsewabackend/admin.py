@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import signup,Restaurants,Menu
+from .models import signup,Restaurants,Menu, Contact
 # Register your models here.
 
 @admin.register(signup)
@@ -16,3 +16,5 @@ class AdminRestaurants(admin.ModelAdmin):
 @admin.register(Menu)
 class AdminMenu(admin.ModelAdmin):
     list_display = ['id','name','price','Choose_restaurant']
+
+admin.site.register(Contact)

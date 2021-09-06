@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib import auth
-from .models import signup,Restaurants, Menu
+from .models import signup,Restaurants, Menu, Contact
 from django.contrib import messages
 from . forms import RegistrationForm,MenuForm
 from django.contrib.auth import authenticate, login
@@ -133,4 +133,35 @@ def updateMenu(request, id):
 
 
 def contact(request):
+    if request.method == "POST":
+        contact = Contact()
+        first_name = request.POST.get("fname")
+        last_name = request.POST.get("lname")
+        email = request.POST.get("email")
+        comment = request.POST.get("comment")
+
+        if (
+            len(first_name) < 1
+            or len(last_name) < 1
+            or len(email) < 1
+            or len(comment) < 1
+        ):
+            messages.error(
+                request, "Something is missing, please fill the form correctly."
+            )
+        else:
+            contact.first_name = first_name
+            contact.last_name = last_name
+            contact.email = email
+            contact.comment = comment
+            contact.save()
+            messages.success(
+                request,
+                "Thanks for contacting us, "
+                + first_name
+                + ". We will contact you soon.",
+            )
+
+        return HttpResponseRedirect("/contactus/")
+
     return render(request, "contactus.html")
